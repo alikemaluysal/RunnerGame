@@ -1,12 +1,13 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class RoadManager : MonoBehaviour
 {
     public GameObject roadPrefab;
     public GameObject player;
     public int tileLength = 30;
-    public int tilesOnScreen = 5;
+    public int tilesOnScreen = 120;
     private float spawnZ = 0f;
     private float safeZone = 15f;
     private List<GameObject> activeTiles = new();
@@ -35,6 +36,8 @@ public class RoadManager : MonoBehaviour
         GameObject go = Instantiate(roadPrefab, new Vector3(0f, 0f, spawnZ), Quaternion.identity);
         activeTiles.Add(go);
         spawnZ += tileLength;
+
+        Debug.Log("Roat Tile Spawned: " + spawnZ);
 
         var coinSpawner = go.GetComponent<CoinSpawner>();
         if (coinSpawner != null)

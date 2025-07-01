@@ -122,7 +122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 6477101550135756222, guid: 3b5853adedca31c4da0ff8cc07999d94, type: 3}
-  coinCount: 5
-  horizontalRange: 2
+  coinCount: 1
+  horizontalRange: 5
   minZ: 5
   maxZ: 25
+  minCoins: 0
+  maxCoins: 1
