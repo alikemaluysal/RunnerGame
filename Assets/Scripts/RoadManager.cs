@@ -37,7 +37,6 @@ public class RoadManager : MonoBehaviour
         activeTiles.Add(go);
         spawnZ += tileLength;
 
-        Debug.Log("Roat Tile Spawned: " + spawnZ);
 
         var coinSpawner = go.GetComponent<CoinSpawner>();
         if (coinSpawner != null)
